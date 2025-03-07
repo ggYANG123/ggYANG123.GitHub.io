@@ -14,9 +14,10 @@
 <meta property="og:description" content="Git配置公钥和密钥生成公钥密钥1.下载 Git2.生成密钥：1ssh-keygen -t rsa -b 4096 -C &quot;your_email@example.com&quot; . -t rsa 指定密钥类型为RSA。. -b 4096 指定密钥长度为4096位。. -C 后面跟上你的邮箱，用于标识这个密钥。运行这个命令后，系统会提示你输入一个文件路径来保存密钥（例如&#x2F;ho">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://ggyang.github.io/2025/02/18/useText/image.png">
-<meta property="og:image" content="http://ggyang.github.io/useText/image-1.png">
+<meta property="og:image" content="http://ggyang.github.io/2025/02/18/useText/image-1.png">
+<meta property="og:image" content="http://ggyang.github.io/%E5%8D%9A%E6%96%87%E6%96%87%E4%BB%B6%E5%90%8D/%E5%9B%BE%E7%89%87%E5%90%8D%E7%A7%B0">
 <meta property="article:published_time" content="2025-02-18T05:34:05.000Z">
-<meta property="article:modified_time" content="2025-03-07T06:00:05.243Z">
+<meta property="article:modified_time" content="2025-03-07T06:11:48.631Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://ggyang.github.io/2025/02/18/useText/image.png">
@@ -112,30 +113,29 @@
 <h3 id="4-测试SSH连接"><a href="#4-测试SSH连接" class="headerlink" title="4.测试SSH连接"></a>4.测试SSH连接</h3><p>配置完SSH密钥后，你可以测试SSH连接是否成功：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com  # 对于GitHub</span><br></pre></td></tr></table></figure>
 <p>如果一切配置正确，你会看到一条欢迎消息，表明SSH连接成功。</p>
-<h1 id="Git建库"><a href="#Git建库" class="headerlink" title="Git建库"></a>Git建库</h1><p>建立名为 username.github.io的储存库。<br>需要特别注意的是仓库名字是 Github用户名.github.io 这个格式<br>注意记得勾选 Add a README file，为了方便后续查看 GitHub Pages 的域名和部署分支，然后点击创建<br><img src="/./useText/image-1.png"></p>
+<h1 id="Git建库"><a href="#Git建库" class="headerlink" title="Git建库"></a>Git建库</h1><p>建立名为 username.github.io的储存库。<br>需要特别注意的是仓库名字是 Github用户名.github.io 这个格式<br>注意记得勾选 Add a README file，为了方便后续查看 GitHub Pages 的域名和部署分支，然后点击创建</p>
+<img src="/2025/02/18/useText/image-1.png" class>
+
 <h2 id="上传本地博客到库"><a href="#上传本地博客到库" class="headerlink" title="上传本地博客到库"></a>上传本地博客到库</h2><ol>
 <li>修改 _config.yml 文件  末尾添加  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/one-command-deployment</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:ggYANG123/ggYANG123.github.io.git</span><br><span class="line">  branch: main</span><br><span class="line">```  </span><br><span class="line">2. 在当前博客目录安装 git 插件使用 git bash 执行这个命令  </span><br></pre></td></tr></table></figure>
 npm install hexo-deployer-git –save<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3.  最后依次执行  </span><br></pre></td></tr></table></figure>
 hexo clean      # 清理 Hexo 缓存：<br>hexo generate   # 重新生成静态文件<br>hexo deploy     # hexo deploy</li>
 </ol>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">注意：如果出现用户名的错误请输入</span><br></pre></td></tr></table></figure>
-<h2 id="git-config-–global-user-email-“-49-x35-50-x33-56-x30-49-x37-57-x31-x37-64-x31-x36-x33-x2e-x63-x6f-x6d-“git-config-–global-user-name-“ggYANG123”"><a href="#git-config-–global-user-email-“-49-x35-50-x33-56-x30-49-x37-57-x31-x37-64-x31-x36-x33-x2e-x63-x6f-x6d-“git-config-–global-user-name-“ggYANG123”" class="headerlink" title="git config –global user.email “&#49;&#x35;&#50;&#x33;&#56;&#x30;&#49;&#x37;&#57;&#x31;&#x37;&#64;&#x31;&#x36;&#x33;&#x2e;&#x63;&#x6f;&#x6d;“git config –global user.name  “ggYANG123”"></a>git config –global user.email “<a href="mailto:&#49;&#x35;&#50;&#x33;&#56;&#x30;&#49;&#x37;&#57;&#x31;&#x37;&#64;&#x31;&#x36;&#x33;&#x2e;&#x63;&#x6f;&#x6d;">&#49;&#x35;&#50;&#x33;&#56;&#x30;&#49;&#x37;&#57;&#x31;&#x37;&#64;&#x31;&#x36;&#x33;&#x2e;&#x63;&#x6f;&#x6d;</a>“<br>git config –global user.name  “ggYANG123”<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## 网址访问</span><br><span class="line">直接访问： https://用户名.github.io</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 基本使用</span><br><span class="line">1. 进入目录 ：source\_posts</span><br><span class="line">2. 新建.md文件进行编辑，使用vscode打开即可   或者markdown 格式的笔记等</span><br><span class="line">3. 基本格式 使用 --- 包括起来的内容称之为 Front-matter，即前置信息</span><br></pre></td></tr></table></figure></h2><h2 id="title-My-New-Post-88date-2024-02-17-13-34-05tags"><a href="#title-My-New-Post-88date-2024-02-17-13-34-05tags" class="headerlink" title="title: My New Post 88date: 2024-02-17 13:34:05tags:"></a>title: My New Post 88<br>date: 2024-02-17 13:34:05<br>tags:</h2><p>正文 markdown</p>
-<pre><code>|配置项|意义|
-|-|-|
-|title|网页文章标题|
-|date|文章创建时间|
-|comments|文章评论功能是否启动|
-|tags|文章标签|
-|categories|文章分类|
-|keywords|文章关键字|
+<h2 id="git-config-–global-user-email-“-x31-53-50-51-x38-48-49-x37-x39-x31-x37-x40-x31-x36-51-x2e-99-x6f-x6d-“git-config-–global-user-name-“ggYANG123”"><a href="#git-config-–global-user-email-“-x31-53-50-51-x38-48-49-x37-x39-x31-x37-x40-x31-x36-51-x2e-99-x6f-x6d-“git-config-–global-user-name-“ggYANG123”" class="headerlink" title="git config –global user.email “&#x31;&#53;&#50;&#51;&#x38;&#48;&#49;&#x37;&#x39;&#x31;&#x37;&#x40;&#x31;&#x36;&#51;&#x2e;&#99;&#x6f;&#x6d;“git config –global user.name  “ggYANG123”"></a>git config –global user.email “<a href="mailto:&#x31;&#53;&#50;&#51;&#x38;&#48;&#49;&#x37;&#x39;&#x31;&#x37;&#x40;&#x31;&#x36;&#51;&#x2e;&#99;&#x6f;&#x6d;">&#x31;&#53;&#50;&#51;&#x38;&#48;&#49;&#x37;&#x39;&#x31;&#x37;&#x40;&#x31;&#x36;&#51;&#x2e;&#99;&#x6f;&#x6d;</a>“<br>git config –global user.name  “ggYANG123”<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## 网址访问</span><br><span class="line">直接访问： https://用户名.github.io</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 基本使用</span><br><span class="line">1. 进入目录 ：source\_posts</span><br><span class="line">2. 新建.md文件进行编辑，使用vscode打开即可   或者markdown 格式的笔记等</span><br><span class="line">3. 基本格式 使用 --- 包括起来的内容称之为 Front-matter，即前置信息</span><br></pre></td></tr></table></figure></h2><h2 id="title-My-New-Post-88date-2024-02-17-13-34-05tags"><a href="#title-My-New-Post-88date-2024-02-17-13-34-05tags" class="headerlink" title="title: My New Post 88date: 2024-02-17 13:34:05tags:"></a>title: My New Post 88<br>date: 2024-02-17 13:34:05<br>tags:</h2><p>正文 markdown</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">|配置项|意义|</span><br><span class="line">|-|-|</span><br><span class="line">|title|网页文章标题|</span><br><span class="line">|date|文章创建时间|</span><br><span class="line">|comments|文章评论功能是否启动|</span><br><span class="line">|tags|文章标签|</span><br><span class="line">|categories|文章分类|</span><br><span class="line">|keywords|文章关键字|</span><br><span class="line"></span><br><span class="line">正文就是markdown 语法了</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## Image问题 </span><br><span class="line">不mark中显示上传之后  不能显示图片问题</span><br><span class="line">1. 安装转换路径插件，打开项目目录  </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>  npm install hexo-asset-img –save</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">2.修改hexo根目录下的_config.yml文件</span><br></pre></td></tr></table></figure>
 
-正文就是markdown 语法了
-</code></pre>
+<p>post_asset_folder: true</p>
+<p>url: <a target="_blank" rel="noopener" href="http://yourname.github.io/">http://yourname.github.io</a>  #改成自己的地址</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">3. 使用以下代码进行插入</span><br></pre></td></tr></table></figure>
+<p><img src="/%E5%8D%9A%E6%96%87%E6%96%87%E4%BB%B6%E5%90%8D/%E5%9B%BE%E7%89%87%E5%90%8D%E7%A7%B0"><br>&#96;&#96;&#96;</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://ggyang.github.io/2025/02/18/useText/" data-id="cm7ydfkyr0000wkc75t14eqis" data-title="博客使用说明" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://ggyang.github.io/2025/02/18/useText/" data-id="cm7ydos170000x0c7ak3tda5y" data-title="博客使用说明" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
