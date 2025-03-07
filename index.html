@@ -133,14 +133,54 @@
 <li>新建.md文件进行编辑，使用vscode打开即可   或者markdown 格式的笔记等</li>
 <li>基本格式 使用 — 包括起来的内容称之为 Front-matter，即前置信息</li>
 </ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: My New Post 88</span><br><span class="line">date: 2024-02-17 13:34:05</span><br><span class="line">tags:</span><br><span class="line">---</span><br><span class="line">正文 markdown  </span><br><span class="line"></span><br><span class="line">```   </span><br><span class="line"></span><br><span class="line">|配置项|意义|</span><br><span class="line">|-|-|</span><br><span class="line">|title|网页文章标题|</span><br><span class="line">|date|文章创建时间|</span><br><span class="line">|comments|文章评论功能是否启动|</span><br><span class="line">|tags|文章标签|</span><br><span class="line">|categories|文章分类|</span><br><span class="line">|keywords|文章关键字|</span><br><span class="line"></span><br><span class="line">正文就是markdown 语法了</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## Image问题 </span><br><span class="line">不mark中显示上传之后  不能显示图片问题</span><br><span class="line">1. 安装转换路径插件，打开项目目录    </span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>  npm install hexo-asset-img –save</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">2.修改hexo根目录下的_config.yml文件  </span><br><span class="line"> </span><br></pre></td></tr></table></figure>
-<p>post_asset_folder: true</p>
-<p>url: <a target="_blank" rel="noopener" href="http://yourname.github.io/">http://yourname.github.io</a>  #改成自己的地址</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">3. 使用以下代码进行插入  </span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p><img src="/%E5%8D%9A%E6%96%87%E6%96%87%E4%BB%B6%E5%90%8D/%E5%9B%BE%E7%89%87%E5%90%8D%E7%A7%B0"><br>&#96;&#96;&#96;</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: My New Post 88</span><br><span class="line">date: 2024-02-17 13:34:05</span><br><span class="line">tags:</span><br><span class="line">---</span><br><span class="line">正文 markdown</span><br></pre></td></tr></table></figure>
 
+<table>
+<thead>
+<tr>
+<th>配置项</th>
+<th>意义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>title</td>
+<td>网页文章标题</td>
+</tr>
+<tr>
+<td>date</td>
+<td>文章创建时间</td>
+</tr>
+<tr>
+<td>comments</td>
+<td>文章评论功能是否启动</td>
+</tr>
+<tr>
+<td>tags</td>
+<td>文章标签</td>
+</tr>
+<tr>
+<td>categories</td>
+<td>文章分类</td>
+</tr>
+<tr>
+<td>keywords</td>
+<td>文章关键字</td>
+</tr>
+</tbody></table>
+<p>正文就是markdown 语法了</p>
+<h2 id="Image问题"><a href="#Image问题" class="headerlink" title="Image问题"></a>Image问题</h2><p>不mark中显示上传之后  不能显示图片问题</p>
+<ol>
+<li>安装转换路径插件，打开项目目录</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-asset-img --save</span><br></pre></td></tr></table></figure>
+
+<p>2.修改hexo根目录下的_config.yml文件  </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">post_asset_folder: true</span><br><span class="line"></span><br><span class="line">url: http://yourname.github.io  #改成自己的地址</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>使用以下代码进行插入</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![](博文文件名/图片名称)     </span><br></pre></td></tr></table></figure>
       
     </div>
     <footer class="article-footer">
